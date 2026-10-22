@@ -60,7 +60,7 @@
 
 - <span class="repo">Kali-Security-MCP</span>：基于 MCP 协议的 LLM 自主多智能体系统，星标 81，派生 17，许可为 MIT。主控智能体负责规划并派发任务，17 个子智能体各自作为独立决策单元执行，结果经汇总后以 SSE 实时推送。每个决策均由模型输出的结构化 JSON 驱动，攻击图、蚁群算法与知识库仅提供上下文与候选边评分，不直接触发工具；工具调用结果由确定性规则提炼为证据，以降低模型编造的可能。检索侧使用本地向量库配合 BM25 与倒数排名融合，索引按内容哈希增量构建。运行时支持 stdio 与 SSE 两种传输方式，执行后端可在本地子进程、SSH 与容器之间自动选择。项目文档明确限定其用途为已获书面授权的渗透测试、竞赛与防御评估。
 - <span class="repo">OpenGoal-skill</span>：将自然语言需求转换为结构化可执行指令的分析工具，许可为 MIT。按功能需求、技术架构、领域模型、非功能需求与依赖关系五个维度拆解需求，并检测循环依赖；输出分为面向人与面向模型两种版本，附五维验收标准；可选生成依赖图、架构图、服务图与领域模型图四类图示。
-- <span class="repo">Security-LLM-train-data</span>：安全领域大模型训练数据整理。
+- <span class="repo">Security-LLM-train-data</span>：安全领域大模型训练数据，仓库未附说明文档。
 </div>
 
 ## 4.4 Megalomanian
@@ -80,7 +80,7 @@
 
 代表项目：
 
-- <span class="repo">AWD_toolkits</span>：面向攻防对抗（AWD）赛制的 Python 工具箱，以命令行菜单交互，包含端口监听与载荷生成两类功能。项目要求 Linux 环境与 Python 3.8 及以上，文档说明其仅限授权赛事环境使用。
+- <span class="repo">AWD_toolkits</span>：面向攻防对抗（AWD）赛制的 Python 工具箱，以命令行菜单交互，包含端口监听与载荷生成两类功能。项目要求 Linux 环境与 Python 3.8 及以上，依赖以虚拟环境安装。
 - <span class="repo">wxtract</span>：Windows 平台的微信 4.x 聊天记录本地导出工具，许可为 MIT。全程在本机完成，不联网、不上传、不修改原始数据。实现上以只读方式扫描进程内存取得候选密钥，用数据库首页的 HMAC 校验密钥有效性；有 sqlcipher3 时完整解密并合并预写日志，无该依赖时以系统加密接口按页解密。输出为纯文本与 JSONL 两种格式。文档明确限定其仅可用于本人设备与本人账号的数据。
 - <span class="repo">PCL-2.13.1.1-NoUpdate</span>：Minecraft 启动器的第三方修改版，星标 6，以 C# 实现，保留下载功能并禁用启动器自动更新。
 - <span class="repo">saishangfaqiao</span>：法律咨询场景下人工智能助手的技术方案文档。前端采用 Vue 3 与 Vant 构建移动端页面，后端为 FastAPI 单体服务，数据库为 PostgreSQL，部署采用容器编排；文档明确不引入微服务、消息队列与智能体框架，子模块以提示词模板加知识片段实现。含验收指标与实施周期。
@@ -103,9 +103,9 @@
 
 公开仓库以 Python 实现的小型工具与练习项目为主，涉及大模型服务的检索与调用。多数仓库尚未附说明文档，此处仅列可核对的信息。
 
-- <span class="repo">ollama_in_fofa</span>：围绕大模型服务检索与访问的 Python 项目，仓库创建于 2025 年 2 月，未附说明文档。
+- <span class="repo">ollama_in_fofa</span>：围绕大模型服务检索与访问的 Python 项目，仓库创建于 2025 年 2 月。仓库描述为关于本地大模型部署的替代方案，README 未提供可核对的技术细节。
 - <span class="repo">songshuimao</span>：Python 项目，未附说明文档。
-- <span class="repo">New-Sim-U-Kraft-1.20.1-</span>：Minecraft 整合包配置整理。
+- <span class="repo">New-Sim-U-Kraft-1.20.1-</span>：Minecraft 整合包配置整理，未附说明文档。
 </div>
 
 ## 4.6 其他成员
