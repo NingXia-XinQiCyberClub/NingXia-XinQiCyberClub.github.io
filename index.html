@@ -54,7 +54,17 @@
         pre: '',
         style: 'text-align: center; color: #5b6478; font-size: 13px; padding: 24px 0;',
         sitename: ''
-      }
+      },
+      plugins: [
+        function (hook) {
+          hook.doneEach(function () {
+            var name = '宁夏大学鑫启网安俱乐部';
+            var h1 = document.querySelector('.markdown-section h1');
+            var page = h1 ? h1.textContent.trim() : '';
+            document.title = (!page || page === name) ? name : page + ' · ' + name;
+          });
+        }
+      ]
     }
   </script>
 
