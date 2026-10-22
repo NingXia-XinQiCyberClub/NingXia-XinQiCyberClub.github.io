@@ -468,6 +468,45 @@ body.close .content {
   font-size: 13px;
 }
 
+/* 二维码 */
+.qr-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin: 22px 0;
+  padding: 20px 16px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--soft);
+}
+
+.qr-box img {
+  width: 240px;
+  height: 240px;
+  display: block;
+  background: #fff;
+  border-radius: 6px;
+}
+
+.qr-box .qr-caption {
+  font-size: 14px;
+  color: var(--navy);
+  letter-spacing: 0.04em;
+}
+
+.qr-box .qr-note {
+  font-size: 12.5px;
+  color: var(--muted);
+}
+
+@media screen and (max-width: 480px) {
+  .qr-box img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
 /* 移动端 */
 @media screen and (max-width: 768px) {
   .sidebar {

@@ -29,7 +29,7 @@ https://ningxia-xinqicyberclub.github.io/
 | `_sidebar.md` | 左侧导航 |
 | `_navbar.md` | 顶部导航 |
 | `assets/style.css` | 站点样式 |
-| `assets/img/` | 标志与成员头像 |
+| `assets/img/` | 标志、成员头像与邀请二维码 |
 | `assets/vendor/` | docsify 及其插件 |
 
 ## 三、本地预览
@@ -47,7 +47,7 @@ python -m http.server 8899
 1. 使用书面中文，陈述句式，段落与列表结构清晰
 2. 不使用 emoji、感叹号与口语化表达
 3. 涉及成员的技术方向与项目，仅采信其公开仓库的说明文档，不添加未经证实的能力描述
-4. 站点内容公开可访问，不得写入飞书群邀请链接、二维码、内部联络方式与赛事内部资料
+4. 站点内容公开可访问。飞书团队邀请二维码经评估后公开，须同时满足三项条件：团队开启加入审批、二维码短期有效、页面注明 +86 手机号限制。除此之外不得写入内部联络方式、群聊记录与赛事内部资料
 
 ## 五、维护约定
 
@@ -57,6 +57,7 @@ python -m http.server 8899
 | 新增页面 | 新建 `.md` 文件，并在 `_sidebar.md` 中登记 |
 | 更新成员条目 | 同步修改 `members.md` 与 `assets/img/` 中的头像 |
 | 调整样式 | 仅修改 `assets/style.css`，不直接改 `assets/vendor/` 中的第三方文件 |
+| 更新飞书二维码 | 重新生成邀请二维码，替换 `assets/img/feishu-qr.png`，并同步修改 `contact.md` 第 8.2 节的有效期文字 |
 
 `assets/vendor/` 中的文件由 npm 包直接取得，不应手工修改。如需升级，整体替换对应文件并更新 `index.html` 中的引用。
 
