@@ -1,0 +1,10 @@
+- [首页](/)
+- 社团
+  - [社团简介](about.md)
+  - [技术方向与活动](activities.md)
+  - [主要成员](members.md)
+- 加入
+  - [GitHub 使用入门](github.md)
+  - [加入流程](join.md)
+- [常见问题](faq.md)
+- [联系方式](contact.md)

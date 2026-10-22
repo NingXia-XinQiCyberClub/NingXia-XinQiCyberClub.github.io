@@ -1,0 +1,4 @@
+- [社团简介](about.md)
+- [加入流程](join.md)
+- [GitHub 仓库](https://github.com/NingXia-XinQiCyberClub)
+- [讨论区](https://github.com/NingXia-XinQiCyberClub/.github/discussions)
