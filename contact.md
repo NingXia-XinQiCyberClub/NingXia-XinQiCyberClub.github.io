@@ -5,7 +5,7 @@
 | 用途 | 渠道 | 说明 |
 | :-- | :-- | :-- |
 | 申请加入 | [加入社团申请](https://github.com/NingXia-XinQiCyberClub/.github/issues/new?template=join.yml) | 提交后由维护者审核 |
-| 日常沟通 | [飞书团队](#82-飞书团队) | 扫码申请，经管理员审批后加入 |
+| 日常沟通 | 飞书团队 | 见第 8.2 节；扫码申请，经管理员审批后加入 |
 | 技术提问 | [讨论区问答分类](https://github.com/NingXia-XinQiCyberClub/.github/discussions/categories/q-a) | 提问与结论均留档 |
 | 项目与功能提议 | [讨论区提议分类](https://github.com/NingXia-XinQiCyberClub/.github/discussions/categories/ideas) | 说明应用场景 |
 | 文档错误与站点故障 | [讨论区](https://github.com/NingXia-XinQiCyberClub/.github/discussions) 或对应仓库工单 | 附现象与复现步骤 |
