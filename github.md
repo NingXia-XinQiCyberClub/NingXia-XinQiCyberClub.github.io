@@ -49,21 +49,25 @@
 
 ## 6.5 最小操作集
 
-以下五条命令覆盖日常协作的多数场景：
+成员账号对组织仓库只有读权限，提交修改需先 fork（在仓库页面点 **Fork**）。以下命令覆盖日常协作的多数场景：
 
 ```bash
-git clone <仓库地址>              # 克隆仓库到本地
-git switch -c <分支名>            # 新建并切换到分支
-git add <文件>                    # 暂存修改
-git commit -m "<提交信息>"        # 提交修改
-git push -u origin <分支名>       # 推送分支至远端
+git clone git@github.com:<本人用户名>/<仓库>.git    # 克隆自己的 fork
+git remote add upstream https://github.com/NingXia-XinQiCyberClub/<仓库>.git
+git fetch upstream                                 # 拉取组织仓库的更新
+git switch -c <分支名>                             # 新建并切换到分支
+git add <文件>                                     # 暂存修改
+git commit -m "<提交信息>"                         # 提交修改
+git push -u origin <分支名>                        # 推送到本人 fork
 ```
 
-修改完成后在 GitHub 页面发起变更请求。合并后同步本地：
+修改完成后在 fork 页面发起变更请求，base 选组织仓库的 `main`。合并后同步 fork 与本地：
 
 ```bash
 git switch main
-git pull
+git fetch upstream
+git merge --ff-only upstream/main
+git push origin main
 git branch -d <分支名>
 ```
 
@@ -86,7 +90,7 @@ git branch -d <分支名>
 | 方式 | 入口 |
 | :-- | :-- |
 | 领取任务 | 教程仓库中标有 `good first issue` 的工单 |
-| 提交修改 | 新建分支，修改后发起变更请求 |
+| 提交修改 | fork 后新建分支，修改完成从 fork 发起变更请求 |
 | 提问讨论 | 组织讨论区的问答分类 |
 | 报告问题 | 对应仓库的缺陷报告表单 |
 | 提议项目 | 组织讨论区的提议分类 |
