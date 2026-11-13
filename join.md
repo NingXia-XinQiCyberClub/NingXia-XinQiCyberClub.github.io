@@ -1,6 +1,20 @@
-# 加入流程
+<section class="join-intro">
+  <div class="eyebrow"><span class="status-dot"></span> JOIN THE CLUB · 从这里开始</div>
+  <h1>你的安全探索，<br>从鑫启网安俱乐部开始。</h1>
+  <p>无需技术门槛，带上好奇心与行动力。<br>通过 GitHub 提交申请，开启你的第一次开源协作。</p>
+  <div class="hero-actions"><a class="primary" href="https://github.com/NingXia-XinQiCyberClub/.github/issues/new?template=join.yml" target="_blank" rel="noopener noreferrer">提交加入申请 ↗</a><a class="ghost" href="#/github">先了解 GitHub →</a></div>
+  <div class="join-meta"><span>面向宁夏大学在校学生</span><span>零基础友好</span><span>入门操作约 45 分钟</span></div>
+  <div class="join-watermark" aria-hidden="true">HELLO,<br>EXPLORER.</div>
+</section>
 
-加入社团分为申请、审核与入门三个阶段。全程在 GitHub 上完成，预计耗时 45 分钟。
+<div class="section-heading"><div><span class="eyebrow">THREE STEPS TO START</span><h2>三步，开启新的旅程</h2></div><span class="section-note">审核等待时间另计</span></div>
+<div class="steps-grid">
+  <a class="step-card" href="#/join?id=_521-提交加入申请"><span class="step-number">01</span><h3>提交申请</h3><p>准备 GitHub 账号，在申请表中填写个人信息与研究兴趣。</p><span class="step-link">查看申请要求 ↗</span></a>
+  <a class="step-card" href="#/join?id=_53-审核与开通"><span class="step-number">02</span><h3>等待审核</h3><p>留意注册邮箱，审核通过后接受组织邀请，成为社团成员。</p><span class="step-link">邀请一般 3 个工作日内发出 ↗</span></a>
+  <a class="step-card" href="#/join?id=_54-入门任务"><span class="step-number">03</span><h3>完成首次协作</h3><p>按清单配置环境、提交首次变更，并加入飞书团队参与交流。</p><span class="step-link">查看入门任务 ↗</span></a>
+</div>
+
+<div class="reading-note"><span>开始之前</span> 准备一个 GitHub 账号，确认可以正常访问 GitHub。下面保留完整流程，方便随时查阅。</div>
 
 ## 5.1 前提条件
 

@@ -5,15 +5,26 @@
   <meta charset="UTF-8">
   <title>宁夏大学鑫启网安俱乐部</title>
   <meta name="description" content="宁夏大学鑫启网安俱乐部官方站点，介绍俱乐部定位、技术方向、主要成员与加入方式。">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#192186">
   <link rel="icon" type="image/png" href="assets/img/logo.png">
   <link rel="apple-touch-icon" href="assets/img/logo.png">
   <link rel="stylesheet" href="assets/vendor/vue.css">
-  <link rel="stylesheet" href="assets/style.css?v=4">
+  <link rel="stylesheet" href="assets/style.css?v=11">
 </head>
 
 <body>
+  <header class="site-header">
+    <a class="site-brand" href="#/" aria-label="鑫启网安俱乐部首页"><img src="assets/img/logo.png" alt=""><span>鑫启网安俱乐部<small>XINQI CYBER CLUB · 宁夏大学</small></span></a>
+    <nav class="site-links" aria-label="主导航"><a href="#/">首页</a><a href="#/about">关于我们</a><a href="#/activities">探索方向</a><a href="#/members">社团成员</a><a class="header-join" href="#/join">加入我们 <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <nav class="mobile-nav" aria-label="手机导航">
+    <a href="#/"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m3 10 9-7 9 7v10H15v-6H9v6H3Z"/></svg><span>首页</span></a>
+    <a href="#/about"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 6c-3-2-6-2-10-1v15c4-1 7-1 10 1 3-2 6-2 10-1V5c-4-1-7-1-10 1Zm0 0v15"/></svg><span>社团简介</span></a>
+    <a href="#/join"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 21 7v6c0 4-9 8-9 8s-9-4-9-8V7l9-4Zm0 5v8m-4-4h8"/></svg><span>加入我们</span></a>
+    <a href="#/contact"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 4h18v13H9l-6 4V4Zm4 5h10M7 13h6"/></svg><span>联系社团</span></a>
+  </nav>
+  <button class="nav-backdrop" aria-label="关闭导航" tabindex="-1" onclick="document.body.classList.remove('close'); document.querySelector('.sidebar-toggle').setAttribute('aria-expanded', 'false')"></button>
   <div id="app">正在加载站点内容。</div>
 
   <script>
@@ -21,7 +32,8 @@
       name: '<img src="assets/img/logo.png" class="brand-logo" alt=""> 宁夏大学鑫启网安俱乐部',
       nameLink: '/',
       loadSidebar: true,
-      loadNavbar: true,
+      requestHeaders: { 'Cache-Control': 'no-cache' },
+      loadNavbar: false,
       subMaxLevel: 0,
       homepage: 'home.md',
       coverpage: false,
@@ -32,7 +44,7 @@
       executeScript: false,
       noCompileLinks: [],
       search: {
-        placeholder: '搜索',
+        placeholder: '搜索社团文档…',
         noData: '未找到匹配内容',
         depth: 3,
         paths: 'auto'
@@ -59,15 +71,47 @@
         function (hook) {
           hook.doneEach(function () {
             var name = '宁夏大学鑫启网安俱乐部';
-            var h1 = document.querySelector('.markdown-section h1');
+            var h1 = document.querySelector(window.innerWidth <= 768 ? '.markdown-section h1' : '.home-hero h1, .markdown-section > h1, .join-intro h1');
             var page = h1 ? h1.textContent.trim() : '';
             document.title = (!page || page === name) ? name : page + ' · ' + name;
+            var route = window.location.hash.split('?')[0] || '#/';
+            document.body.dataset.page = route === '#/' ? 'home' : route.replace('#/', '').split('/')[0];
+            document.querySelectorAll('.site-links a, .mobile-nav a').forEach(function (link) {
+              var active = link.getAttribute('href') === route;
+              link.classList.toggle('active', active);
+              if (active) link.setAttribute('aria-current', 'page');
+              else link.removeAttribute('aria-current');
+            });
+            if (window.innerWidth <= 768) document.body.classList.remove('close');
+            var article = document.querySelector('.markdown-section');
+            if (article) {
+              article.querySelectorAll('table').forEach(function (table) {
+                var wrap = document.createElement('div');
+                wrap.className = 'table-scroll';
+                wrap.tabIndex = 0;
+                wrap.setAttribute('role', 'region');
+                wrap.setAttribute('aria-label', '表格，可横向滚动');
+                table.parentNode.insertBefore(wrap, table);
+                wrap.appendChild(table);
+              });
+              var footer = document.createElement('footer');
+              footer.className = 'site-footer';
+              footer.innerHTML = '<span>鑫启网安俱乐部 <small>探索 · 实践 · 共享</small></span><a href="https://github.com/NingXia-XinQiCyberClub" target="_blank" rel="noopener noreferrer">在 GitHub 上与我们协作 ↗</a>';
+              article.appendChild(footer);
+            }
+            var toggle = document.querySelector('.sidebar-toggle');
+            if (toggle) {
+              toggle.setAttribute('aria-label', '展开或收起文档导航');
+              toggle.setAttribute('aria-expanded', String(window.innerWidth <= 768 ? document.body.classList.contains('close') : !document.body.classList.contains('close')));
+              toggle.onclick = function () { setTimeout(function () { toggle.setAttribute('aria-expanded', String(window.innerWidth <= 768 ? document.body.classList.contains('close') : !document.body.classList.contains('close'))); }, 0); };
+            }
           });
         }
       ]
     }
   </script>
 
+  <script src="assets/boot.js?v=3"></script>
   <script src="assets/vendor/docsify.min.js"></script>
   <script src="assets/vendor/search.min.js"></script>
   <script src="assets/vendor/copy-code.min.js"></script>

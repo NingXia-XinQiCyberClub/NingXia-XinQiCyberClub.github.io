@@ -1,51 +1,39 @@
-<div class="hero">
-  <img src="assets/img/logo.png" alt="宁夏大学鑫启网安俱乐部标志">
-  <h1>宁夏大学鑫启网安俱乐部</h1>
-  <p class="subtitle">网络安全方向学生组织</p>
-  <p class="en">XinQi Cyber Club</p>
-  <div class="hero-actions">
-    <a class="primary" href="#/join">申请加入</a>
-    <a class="ghost" href="#/about">了解社团</a>
+<section class="phone-terminal" aria-label="鑫启网安俱乐部">
+  <div class="terminal-bar"><span class="terminal-lights" aria-hidden="true"><i></i><i></i><i></i></span><span>xinqi@nxu: ~</span></div>
+  <div class="terminal-stage">
+    <div class="terminal-command"><span>❯</span> ./hello_xinqi<span class="terminal-cursor" aria-hidden="true">_</span></div>
+    <div class="terminal-emblem" aria-hidden="true"><div class="emblem-ring"></div><img src="assets/img/logo.png" alt=""><span class="emblem-coordinate">[ XQ / NXU ]</span></div>
+    <div class="terminal-output">&gt; curiosity.initialize()</div>
+    <h1 class="club-slogan">见微知隙，<span>破阵无声</span></h1>
+    <p>保持好奇，共同探索安全</p>
+    <a class="terminal-cta" href="#/join"><span><b aria-hidden="true">❯</b> 加入鑫启网安俱乐部</span><span aria-hidden="true">↗</span></a>
+    <div class="terminal-caption">从第一行代码，到第一次并肩作战。</div>
   </div>
-</div>
+  <div class="terminal-status"><span><i></i> LEARN · BUILD · SECURE</span><span>NXU / XINQI</span></div>
+</section>
 
-## 社团定位
+<section class="home-hero">
+  <div class="hero-copy">
+    <div class="eyebrow desktop-command">❯ ./hello_xinqi <span class="terminal-cursor" aria-hidden="true">_</span></div>
+    <h1 class="club-slogan">见微知隙，<span>破阵无声</span></h1>
+    <p>保持好奇，共同探索安全</p>
+    <div class="hero-actions"><a class="primary" href="#/join">加入鑫启网安俱乐部 <span>↗</span></a><a class="ghost" href="#/about">认识我们 <span>→</span></a></div>
+    <div class="hero-note"><span class="status-dot"></span> 面向宁夏大学在校学生 · 零基础也可以开始</div>
+  </div>
+  <div class="cyber-art" aria-hidden="true">
+    <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+    <div class="art-cross cross-one">+</div><div class="art-cross cross-two">+</div>
+    <div class="art-label label-top">EXPLORE THE UNKNOWN</div>
+    <div class="logo-core"><img src="assets/img/logo.png" alt=""></div>
+    <div class="code-tag tag-one">&lt; curiosity /&gt;</div><div class="code-tag tag-two">flag{keep_exploring}</div>
+    <div class="art-label label-bottom">LEARN. BUILD. SECURE.</div>
+  </div>
+</section>
 
-宁夏大学鑫启网安俱乐部是面向本校在校学生的网络安全技术团体，以竞赛训练与技术实践为主要活动形式，覆盖 Web 安全、二进制、逆向工程、密码学、杂项与人工智能安全等方向。
+<div class="principles"><span><b>01</b> 技术驱动 <small>LEARN BY DOING</small></span><span><b>02</b> 开源协作 <small>BUILD TOGETHER</small></span><span><b>03</b> 探索有界 <small>HACK RESPONSIBLY</small></span></div>
 
-社团不设技术门槛。零基础成员从环境搭建与基础概念入手，具备一定基础的成员可直接参与赛事训练与项目开发。全部技术活动限于授权环境，不对校园网与学校信息系统实施任何未授权测试。
+<section class="community-block"><div><span class="eyebrow">A PLACE TO GROW</span><h2>一个人学习，<br>一群人走得更远。</h2><p>鑫启网安俱乐部是面向宁夏大学在校学生的网络安全技术团体。我们通过竞赛训练、技术分享与项目实践，把知识变成经验，也把经验留给后来的人。</p><a class="text-link" href="#/members">认识社团伙伴 ↗</a></div><div class="community-list"><a href="#/activities"><span>01</span><div><h3>在实践中学习</h3><p>CTF 训练、专题分享、内部赛与赛事复盘。</p></div><b>↗</b></a><a href="#/github"><span>02</span><div><h3>在开源中协作</h3><p>用 Issue 记录问题，用 Pull Request 贡献成果。</p></div><b>↗</b></a><a href="#/join"><span>03</span><div><h3>从零开始，也有路径</h3><p>从环境搭建到首次协作，按教程逐步入门。</p></div><b>↗</b></a></div></section>
 
-## 站点导航
+<section class="join-banner"><div><span class="eyebrow">YOUR NEXT CHAPTER</span><h2>下一次探索，和我们一起。</h2><p>无需提前精通技术，带上好奇心与行动力就可以出发。</p></div><a class="primary" href="#/join">查看加入流程 ↗</a></section>
 
-<div class="cards">
-  <a class="card" href="#/about">
-    <span class="card-title">社团简介</span>
-    <span class="card-desc">组织定位、技术方向、活动形式与资源条件。</span>
-  </a>
-  <a class="card" href="#/members">
-    <span class="card-title">主要成员</span>
-    <span class="card-desc">成员的技术方向与公开项目，含仓库入口。</span>
-  </a>
-  <a class="card" href="#/github">
-    <span class="card-title">GitHub 使用入门</span>
-    <span class="card-desc">账号注册、核心概念与协作方式的简要说明。</span>
-  </a>
-  <a class="card" href="#/join">
-    <span class="card-title">加入流程</span>
-    <span class="card-desc">从提交申请到完成首次协作的完整步骤。</span>
-  </a>
-  <a class="card" href="#/activities">
-    <span class="card-title">技术方向与活动</span>
-    <span class="card-desc">训练方向、赛事安排与例会制度。</span>
-  </a>
-  <a class="card" href="#/contact">
-    <span class="card-title">联系方式</span>
-    <span class="card-desc">飞书群组、讨论区与事务受理渠道。</span>
-  </a>
-</div>
-
-## 组织方式
-
-社团在 GitHub 上以组织（Organization）形式运作。教程、规范文件、项目代码与赛事资料均存放于组织仓库，成员通过工单（Issue）与变更请求（Pull Request）参与协作。日常沟通与通知使用飞书。
-
-> 公开仓库可自由查阅与克隆。参与讨论、提交变更与申请加入需拥有 GitHub 账号。
+<p class="boundary-note">所有技术活动仅在靶场、自建环境或明确授权的目标中开展。</p>
